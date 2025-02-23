@@ -7,6 +7,7 @@ Library Management System is a simple web application where you can add and list
 - .NET 8
 - ASP.NET Core MVC
 - Visual Studio
+- BootStrap
 
 ## Installation and Running
 To run this project, follow these steps:
@@ -62,8 +63,14 @@ Here are some key routes used in the project:
 - **Redirect page if lists are empty:** `/Home/IsEmpty`
 
 ## Screenshots
-If you want to add screenshots to the project, you can include them here.
-
+![Örnek Resim](https://github.com/OsmanOzyasar/MVC_Library_Managment_App/blob/master/images/Main_Menu.png)
+![Örnek Resim](https://github.com/OsmanOzyasar/MVC_Library_Managment_App/blob/master/images/Add_Author.png)
+![Örnek Resim](https://github.com/OsmanOzyasar/MVC_Library_Managment_App/blob/master/images/Add_Book.png)
+![Örnek Resim](https://github.com/OsmanOzyasar/MVC_Library_Managment_App/blob/master/images/Author_List.png)
+![Örnek Resim](https://github.com/OsmanOzyasar/MVC_Library_Managment_App/blob/master/images/Book_List.png)
+![Örnek Resim](https://github.com/OsmanOzyasar/MVC_Library_Managment_App/blob/master/images/Author_Detail.png)
+![Örnek Resim](https://github.com/OsmanOzyasar/MVC_Library_Managment_App/blob/master/images/Book_Detail.png)
+![Örnek Resim](https://github.com/OsmanOzyasar/MVC_Library_Managment_App/blob/master/images/About.png)
 ## Contribution
 This project is created as an assignment. Those who want to improve or add new features can modify the code according to their needs.
 
