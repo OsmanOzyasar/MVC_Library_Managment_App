@@ -1,0 +1,32 @@
+﻿@model List<CreateAuthorViewModel>
+
+
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-primary text-center">Authors</h1>
+
+        <ul class="list-group">
+            @foreach (var item in Model)
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    @item.FullName
+                    <div class="d-flex gap-2">
+                        <a asp-controller="Author" asp-action="Edit" asp-route-id="@item.Id" class="text-warning">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        <a asp-controller="Author" asp-action="Delete" asp-route-id="@item.Id" class="text-danger">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                        <a asp-controller="Author" asp-action="Details" asp-route-id="@item.Id" class="text-primary">
+                            <i class="bi bi-info-circle-fill"></i>
+                        </a>
+                    </div>
+                </li>
+            }
+        </ul>
+
+    </div>
+</body>
+

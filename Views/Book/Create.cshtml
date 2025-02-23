@@ -1,0 +1,41 @@
+﻿@model CreateBookViewModel
+
+<h3 class="text-center">New Book Addition Form</h3>
+
+<form method="post" asp-controller="Book" asp-action="Create">
+
+    <div>
+        <label>Title</label>
+        <input asp-for="BookTitle" class="form-control" />
+    </div>
+
+    <div>
+        <label>Genre</label>
+        <input asp-for="BookGenre" class="form-control" />
+    </div>
+
+    <div>
+        <label>ISBN Number</label>
+        <input asp-for="BookISBN" class="form-control" />
+    </div>
+
+    <div>
+        <label>Available Copies</label>
+        <input asp-for="AvailableBookCopies" class="form-control" />
+    </div>
+
+    <div>
+        <label>Publish Date</label>
+        <input asp-for="BookPublishDate" class="form-control" type="date" />
+    </div>
+
+    <div>
+        <label>Authors</label>
+        <select asp-for="AuthorIdV" class="form-control" asp-items="@(new SelectList(ViewBag.Authors, "Id", "FullName"))"></select>
+    </div>
+
+
+    <button type="submit" class="btn btn-dark mt-4 fw-bold float-end">Save Book</button>
+
+
+</form>

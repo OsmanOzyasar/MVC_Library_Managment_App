@@ -1,0 +1,25 @@
+﻿@model CreateAuthorViewModel
+
+
+<h3 class="text-center">New Author Addition Form</h3>
+
+<form method="post" asp-controller="Author" asp-action="Create">
+
+    <div>
+        <label>First Name</label>
+        <input asp-for="FirstName" class="form-control"/>
+    </div>
+
+    <div>
+        <label>Last Name</label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+
+    <div>
+        <label>Date Of Birth</label>
+        <input asp-for="DateOfBirth" class="form-control" type="date" />
+    </div>
+
+    <button type="submit" class="btn btn-dark mt-4 fw-bold float-end">Add Author</button>
+
+</form>

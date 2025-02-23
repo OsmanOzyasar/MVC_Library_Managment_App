@@ -1,0 +1,33 @@
+﻿@{
+    var authors = ViewBag.Author as Author;
+    var books = ViewBag.AuthorBooks as List<Book>;
+}
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-primary text-center">@authors.FullName</h1>
+
+        <h2 class="text-secondary mt-4">Books</h2>
+
+        <ul class="list-group">
+            @foreach (var item in books)
+            {
+                <li class="list-group-item">@item.Title</li>
+            }
+        </ul>
+
+        <h2 class="text-secondary mt-4">Author Details</h2>
+
+        <ul class="list-group">
+            <li class="list-group-item">First Name: @authors.FirstName</li>
+            <li class="list-group-item">Last Name: @authors.LastName</li>           
+            <li class="list-group-item">Birth Day: @authors.DateOfBirth.ToString("dd/MM/yyy")</li>
+        </ul>
+
+        <a asp-controller="Author" asp-action="Edit" asp-route-id="@authors.Id" class="btn btn-dark mt-4 fw-bold float-end">
+            Edit Author
+        </a>
+        
+
+    </div>
+</body>

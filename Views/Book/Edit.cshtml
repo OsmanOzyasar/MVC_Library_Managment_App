@@ -1,0 +1,44 @@
+﻿@model BookEditViewModel
+
+
+<h3 class="text-center">Book Editing Form</h3>
+
+<form method="post" asp-controller="Book" asp-action="Edit">
+
+    <input asp-for="Id" type="hidden"/>
+
+    <div>
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+    <div>
+        <label>Genre</label>
+        <input asp-for="Genre" class="form-control" />
+    </div>
+
+    <div>
+        <label>ISBN Number</label>
+        <input asp-for="ISBN" class="form-control" />
+    </div>
+
+    <div>
+        <label>Available Copies</label>
+        <input asp-for="CopiesAvailable" class="form-control" />
+    </div>
+
+    <div>
+        <label>Publish Date</label>
+        <input asp-for="PublishDate" class="form-control" />
+    </div>
+
+    <div>
+        <label>Authors</label>
+        <select asp-for="AuthorId" class="form-control" asp-items="@(new SelectList(ViewBag.Authors, "Id", "FullName"))"></select>
+    </div>
+
+
+    <button type="submit" class="btn btn-dark mt-4 fw-bold float-end">Edit Book</button>
+
+
+</form>

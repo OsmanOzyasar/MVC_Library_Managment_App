@@ -1,0 +1,29 @@
+﻿@{
+    var author = ViewBag.Author as Author;
+    var book = ViewBag.Book as Book;
+}
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-primary text-center">@book.Title</h1>
+
+        <h2 class="text-secondary mt-4">Book Details</h2>
+
+        <ul class="list-group">
+            <li class="list-group-item">Author: @author.FullName</li>
+            <li class="list-group-item">Genre: @book.Genre</li>
+            <li class="list-group-item">Publish Date: @book.PublishDate.ToString("dd/MM/yyy")</li>
+            <li class="list-group-item">Available Copies: @book.CopiesAvailable</li>
+            <li class="list-group-item">ISBN Number: @book.ISBN</li>
+            
+        </ul>
+    </div>
+
+    <a asp-controller="Book" asp-action="Edit" asp-route-id="@book.Id" class="btn btn-dark mt-4 fw-bold float-end">
+        Edit Book
+    </a>
+
+   
+</body>
+
